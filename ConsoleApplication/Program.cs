@@ -18,9 +18,28 @@ namespace ConsoleApplication
             location = Console.ReadLine();
             Console.WriteLine($"Your name is {name}");
             Console.WriteLine($"Your location is {location}");
+            var dateAndTime = DateTime.Now;
+            var date = dateAndTime.ToShortDateString();
+            Console.WriteLine(date);
+            var christmas = new DateTime(dateAndTime.Year, 12, 25);
+            int daysBetween = (int)((christmas - dateAndTime).TotalDays);
+            Console.WriteLine($"The number of days between {date} and Christmas is {daysBetween}");
 
 
-             
+            double width, height, woodLength, glassArea;
+            string widthString, heightString;
+            Console.WriteLine("Please enter the width:");
+            widthString = Console.ReadLine();
+            width = double.Parse(widthString);
+            Console.WriteLine("Please enter the height:");
+            heightString = Console.ReadLine();
+            height = double.Parse(heightString);
+            woodLength = 2 * (width + height) * 3.25;
+            glassArea = 2 * (width * height);
+            Console.WriteLine("The length of the wood is " +
+            woodLength + " feet");
+            Console.WriteLine("The area of the glass is " +
+            glassArea + " square metres");
 
 
 
